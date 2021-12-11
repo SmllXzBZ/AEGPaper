@@ -12,17 +12,55 @@ remark: This website is only used for collecting and grouping the related paper.
     - [软件漏洞自动利用研究综述](#软件漏洞自动利用研究综述)
     - [自动化漏洞利用研究进展](#自动化漏洞利用研究进展)
 
+- **Usenix 2022**
+    - [FUGIO: Automatic Exploit Generation for PHP Object Injection Vulnerabilities](#FUGIO-Automatic-Exploit-Generation-for-PHP-Object-Injection-Vulnerabilities)
+
 - **Usenix 2021**
     - [EXPRACE: Exploiting Kernel Races through Raising Interrupts](#EXPRACE-Exploiting-Kernel-Races-through-Raising-Interrupts)
+    - [MAZE: Towards Automated Heap Feng Shui](#MAZE-Towards-Automated-Heap-Feng-Shui)
+
+- **CCS 2021**
+    - [Demons in the Shared Kernel: Abstract Resource Attacks Against OS-level Virtualization](#Demons-in-the-Shared-Kernel-Abstract-Resource-Attacks-Against-OS-level-Virtualization)
+
+- **EuroSec 2021**
+    - [Talking About My Generation: Targeted DOM-based XSS Exploit Generation using Dynamic Data Flow Analysis](#Talking-About-My-Generation-Targeted-DOM-based-XSS-Exploit-Generation-using-Dynamic-Data-Flow-Analysis)
+
+- **IEEE Trans 2021**
+    - [GUI-Squatting Attack: Automated Generation of Android Phishing Apps](#GUI-Squatting-Attack-Automated-Generation-of-Android-Phishing-Apps)
+
+- **Checkmate 2021**
+    - [A Framework for Automatic Exploit Generation for JIT Compilers](#A-Framework-for-Automatic-Exploit-Generation-for-JIT-Compilers)
+
+- **ESORICS 2021**
+    - [Towards Automating Code-Reuse Attacks Using Synthesized Gadget Chains](#Towards-Automating-Code-Reuse-Attacks-Using-Synthesized-Gadget-Chains)
+  
+- **ICCNT 2021**
+    - [AngErza: Automated Exploit Generation](#AngErza-Automated-Exploit-Generation) 
+
+- **IEEE Design & Test 2021**
+    - [End-to-End Automated Exploit Generation for Processor Security Validation](#End-to-End-Automated-Exploit-Generation-for-Processor-Security-Validation)
+
+- **arXiv 2021**
+    - [Shellcode_IA32: A Dataset for Automatic Shellcode Generation](#Shellcode_IA32-A-Dataset-for-Automatic-Shellcode-Generation)
 
 - **Usenix 2020**
     - [KOOBE: Towards Facilitating Exploit Generation of Kernel Out-Of-Bounds Write Vulnerabilities](#KOOBE-Towards-Facilitating-Exploit-Generation-of-Kernel-Out-Of-Bounds-Write-Vulnerabilities)
     - [Automatic techniques to systematically discover new heap exploitation primitives](#Automatic-techniques-to-systematically-discover-new-heap-exploitation-primitives)
     - [AURORA: Statistical Crash Analysis for Automated Root Cause Explanation](#AURORA-Statistical-Crash-Analysis-for-Automated-Root-Cause-Explanation)
+    - [Automatic Generation of Compact Printable Shellcodes for x86](#Automatic-Generation-of-Compact-Printable-Shellcodes-for-x86)
+
+- **IEEE Trans 2020**
+    - [Tainting-Assisted and Context-Migrated Symbolic Execution of Android Framework for Vulnerability Discovery and Exploit Generation](#Tainting-Assisted-and-Context-Migrated-Symbolic-Execution-of-Android-Framework-for-Vulnerability-Discovery-and-Exploit-Generation) 
+
+- **SANER 2020**
+    - [EthPloit: From Fuzzing to Efficient Exploit Generation against Smart Contracts](#EthPloit-From-Fuzzing-to-Efficient-Exploit-Generation-against-Smart-Contracts)
 
 - **ACM SIGSAC 2020**
     - [A Generic Technique for Automatically Finding Defense-Aware Code Reuse Attacks](#A-Generic-Technique-for-Automatically-Finding-Defense-Aware-Code-Reuse-Attacks)
     - [A Systematic Study of Elastic Objects in Kernel Exploitation](#A-Systematic-Study-of-Elastic-Objects-in-Kernel-Exploitation)
+
+- **IEEE IRI 2020**
+    - [Relating the Empirical Foundations of Attack Generation and Vulnerability Discovery](#Relating-the-Empirical-Foundations-of-Attack-Generation-and-Vulnerability-Discovery)
 
 - **Access 2020**
     - [HS-Pilot: Heap Security Evaluation Tool Model Based on Atomic Heap Interaction](#HS-Pilot-Heap-Security-Evaluation-Tool-Model-Based-on-Atomic-Heap-Interaction)
@@ -35,6 +73,8 @@ remark: This website is only used for collecting and grouping the related paper.
 
 - **arXiv 2020**
     - [Autosploit: A fully automated framework for evaluating the exploitability of security vulnerabilities](#Autosploit-A-fully-automated-framework-for-evaluating-the-exploitability-of-security-vulnerabilities)
+    - [Attacks on Lightweight Hardware-Based Security Primitives](#Attacks-on-Lightweight-Hardware-Based-Security-Primitives)
+    - [Survey of Methods for Automated Code-Reuse Exploit Generation](#Survey-of-Methods-for-Automated-Code-Reuse-Exploit-Generation)
 
 - **Scientific Programming 2020**
     - [A Pattern-Based Software Testing Framework for Exploitability Evaluation of Metadata Corruption Vulnerabilities](#A-Pattern-Based-Software-Testing-Framework-for-Exploitability-Evaluation-of-Metadata-Corruption-Vulnerabilities)
@@ -269,12 +309,74 @@ Fuzzing技术存在的一个主要问题是其会产生大量的crash样本,如�
 
 **Abstract:** 网络空间安全斗争形式日趋复杂，针对软件安全的攻防博弈愈演愈烈。软件漏洞挖掘与利用的复杂性及专业性，使得大量工作仅能依靠安全专家完成。近年来，漏洞数量激增，仅依靠安全专家已无法有效应对。自动化漏洞利用应运而生，该方法在提升工作效率的同时降低人力成本，并一定程度上满足了自动化攻防的迫切需求。介绍自动化漏洞利用相关概念，对关键技术进行归纳与总结，梳理国内外主流的自动化漏洞利用系统。
 
+### FUGIO: Automatic Exploit Generation for PHP Object Injection Vulnerabilities
+
+* <img src="image/pdf_24px.png">[Paper](./paper/2022FUGIO%20Automatic%20Exploit%20Generation%20for%20PHP%20Object%20Injection%20Vulnerabilities.pdf)
+
+**Abstract:** A PHP object injection (POI) vulnerability is a securitycritical bug that allows the remote code execution of class methods existing in a vulnerable PHP application. Exploiting this vulnerability often requires sophisticated propertyoriented programming to shape an injection object. Existing off-the-shelf tools focus only on identifying potential POI vulnerabilities without confirming the presence of any exploit objects. To this end, we propose FUGIO, the first automatic exploit generation (AEG) tool for POI vulnerabilities. FUGIO conducts coarse-grained static and dynamic program analyses to generate a list of gadget chains that serve as blueprints for exploit objects. FUGIO then runs fuzzing campaigns using these identified chains and produces exploit objects. FUGIO generated 68 exploit objects from 30 applications containing known POI vulnerabilities with zero false positives. FUGIO also found two previously unreported POI vulnerabilities with five exploits, demonstrating its efficacy in generating functional exploits.
+
 ### EXPRACE: Exploiting Kernel Races through Raising Interrupts
 
 * <img src="image/pdf_24px.png">[Paper](./paper/2021EXPRACE%20Exploiting%20Kernel%20Races%20through%20Raising%20Interrupts.pdf)
 
 **Abstract:** A kernel data race is notoriously challenging to detect, reproduce, and diagnose, mainly caused by nondeterministic thread interleaving. The kernel data race has a critical security implication since it often leads to memory corruption, which can be abused to launch privilege escalation attacks. Interestingly, due to the challenges above, the exploitation of the kernel data race is also challenging. Specifically, we find that some kernel races are nearly impossible to exploit due to their unique requirement on execution orders, which are almost impossible to happen without manual intervention.    
 <p style="text-align:justify;text-justify:inter-ideograph;">This paper develops a generic exploitation technique for kernel data races. To this end, we first analyze kernel data races, which finds an intrinsic condition classifying easy-to-exploit and hard-to-exploit races. Then we develop EXPRACE, a generic race exploitation technique for modern kernels, including Linux, Microsoft Windows, and MAC OS X. EXPRACE turns hard-to-exploit races into easy-toexploit races by manipulating an interrupt mechanism during the exploitation. According to our evaluation with 10 realworld hard-to-exploit races, EXPRACE was able to exploit all of those within 10 to 118 seconds, while an exploitation without EXPRACE failed for all given 24 hours.</p>
+
+### MAZE: Towards Automated Heap Feng Shui
+
+* <img src="image/pdf_24px.png">[paper](./paper/2021MAZE%20Towards%20Automated%20Heap%20Feng%20Shui.pdf)
+
+**Abstract:** A large number of memory corruption vulnerabilities, e.g., heap overflow and use after free (UAF), could only be exploited in specific heap layouts via techniques like heap feng shui. To pave the way for automated exploit generation (AEG), automated heap layout manipulation is demanded. In this paper, we present a novel solution MAZE to manipulate proof-of-concept (POC) samples’ heap layouts. It first identifies heap layout primitives (i.e., input fragments or code snippets) available for users to manipulate the heap. Then, it applies a novel Dig & Fill algorithm, which models the problem as a Linear Diophantine Equation and solves it deterministically, to infer a primitive operation sequence that is able to generate target heap layout. We implemented a prototype of MAZE based on the analysis engine S2E, and evaluated it on the PHP, Python and Perl interpreters and a set of CTF (capture the flag) programs, as well as a large micro-benchmark. Results showed that MAZE could generate expected heap layouts for over 90% of them.
+
+### Demons in the Shared Kernel: Abstract Resource Attacks Against OS-level Virtualization
+
+* <img src="image/pdf_24px.png">[paper](./paper/2021Demons%20in%20the%20Shared%20Kernel%20Abstract%20Resource%20Attacks%20Against%20OS-level%20Virtualization.pdf)
+
+**Abstract:** Due to its faster start-up speed and better resource utilization efficiency, OS-level virtualization has been widely adopted and has become a fundamental technology in cloud computing. Compared to hardware virtualization, OS-level virtualization leverages the shared-kernel design to achieve high efficiency and runs multiple user-space instances (a.k.a., containers) on the shared kernel. However, in this paper, we reveal a new attack surface that is intrinsic to OS-level virtualization, affecting Linux, FreeBSD, and Fuchsia. The root cause is that the shared-kernel design in OS-level virtualization results containers in sharing thousands of kernel variables and data structures directly and indirectly. Without exploiting any kernel vulnerabilities, a non-privileged container can easily exhaust the shared kernel variables and data structure instances to cause DoS attacks against other containers. Compared with the physical resources, these kernel variables or data structure instances (termed abstract resources) are more prevalent but underprotected.
+<p style="text-align:justify;text-justify:inter-ideograph;">To show the importance of confining abstract resources, we conduct abstract resource attacks that target different aspects of the OS kernel. The results show that attacking abstract resources is highly practical and critical. We further conduct a systematic analysis to identify vulnerable abstract resources in the Linux kernel, which successfully detects 1,010 abstract resources and 501 of them can be repeatedly consumed dynamically. We also conduct the attacking experiments in the self-deployed shared-kernel container environments on the top 4 cloud vendors. The results show that all environments are vulnerable to abstract resource attacks. We conclude that containing abstract resources is hard and give out multiple strategies for mitigating the risks.</p>
+
+### Talking About My Generation: Targeted DOM-based XSS Exploit Generation using Dynamic Data Flow Analysis
+
+* <img src="image/pdf_24px.png">[paper](./paper/2021Talking%20About%20My%20Generation%20Targeted%20DOM-based%20XSS%20Exploit.pdf)
+
+**Abstract:** Since the invention of JavaScript 25 years ago, website functionality has been continuously shifting from the server-side to the client-side. Web browsers have evolved into an application platform, and HTML5 emerged as a first-class environment for building rich cross-platform applications. This additional functionality on the client-side comes with the added risk of new security issues with increasingly severe consequences. In this work, we investigate the prevalence of DOM-based Cross-Site Scripting (DOM-based XSS) in the top 100,000 most popular websites using a novel targeted exploit generation technique based on dynamic data-flow tracking. In total, this work finds 15,710 potentially insecure dataflows where information from the URL is injected into the HTML of the Web page. Using large-scale exploit generation and validation services, 7199 of these flows lead to JavaScript execution, across 711 different domains. This represents a successful exploit rate of 45.82%, improving on previous methods by factors of 1.8 and 1.9 respectively.
+
+### GUI-Squatting Attack: Automated Generation of Android Phishing Apps
+
+* <img src="image/pdf_24px.png">[paper](./paper/2021GUI-Squatting%20Attack%20Automated%20Generation%20of%20Android%20Phishing%20Apps.pdf)
+
+**Abstract:** Mobile phishing attacks, such as mimic mobile browser pages, masquerade as legitimate applications by leveraging repackaging or clone techniques, have caused varied yet significant security concerns. Consequently, detection techniques have been receiving increasing attention. However, many such detection methods are not well tested and may therefore still be vulnerable to new types of phishing attacks. In this paper, we propose a new attacking technique, named GUI-Squatting attack, which can generate phishing apps (phapps) automatically and effectively on the Android platform. Our method adopts image processing and deep learning algorithms, to enable powerful and large-scale attacks. We observe that a successful phishing attack requires two conditions, page confusion and logic deception during attacks synthesis. We directly optimize these two conditions to create a practical attack. Our experimental results reveal that existing phishing defenses are less effective against such emergent attacks and may therefore stimulate more efficient detection techniques. To further demonstrate that our generated phapps can not only bypass existing detection techniques, but also deceive real users, we conduct a human study and successfully steal users’ login information. The human study also shows that different response messages (e.g., “Crash” and “Server failed”) after pressing the login button mislead users to regard our phapps as functionality problems instead of security threats. Extensive experiments reveal that such newly proposed attacks still remain mostly undetected, and are worth further exploration.
+
+### A Framework for Automatic Exploit Generation for JIT Compilers
+
+* <img src="image/pdf_24px.png">[paper](./paper/2021A%20Framework%20for%20Automatic%20Exploit%20Generation%20for%20JIT%20Compilers.pdf)
+
+**Abstract:** This paper proposes a framework for automatic exploit generation in JIT compilers, focusing in particular on heap corruption vulnerabilities triggered by dynamic code, i.e., code generated at runtime by the JIT compiler. The purpose is to help assess the severity of vulnerabilities and thereby assist with vulnerability triage. The framework consists of two components: the first extracts high-level representations of exploitation primitives from existing exploits, and the second uses the primitives so extracted to construct exploits for new bugs. We are currently building a prototype implementation of the framework focusing on JavaScript JIT compilers. To the best of our knowledge, this is the first proposal to consider automatic exploit generation for code generated dynamically by JIT compilers.
+
+### Towards Automating Code-Reuse Attacks Using Synthesized Gadget Chains
+
+* <img src="image/pdf_24px.png">[paper](./paper/2021Towards%20Automating%20Code-Reuse%20Attacks%20Using%20Synthesized%20Gadget%20Chains.pdf)
+
+**Abstract:** In the arms race between binary exploitation techniques and mitigation schemes, code-reuse attacks have been proven indispensable. Typically, one of the initial hurdles is that an attacker cannot execute their own code due to countermeasures such as data execution prevention (DEP, W^X). While this technique is powerful, the task of finding and correctly chaining gadgets remains cumbersome. Although various methods automating this task have been proposed, they either rely on hard-coded heuristics or make specific assumptions about the gadgets’ semantics. This not only drastically limits the search space but also sacrifices their capability to find valid chains unless specific gadgets can be located. As a result, they often produce no chain or an incorrect chain that crashes the program. In this paper, we present SGC, the first generic approach to identify gadget chains in an automated manner without imposing restrictions on the gadgets or limiting its applicability to specific exploitation scenarios. Instead of using heuristics to find a gadget chain, we offload this task to an SMT solver. More specifically, we build a logical formula that encodes the CPU and memory state at the time when the attacker can divert execution flow to the gadget chain, as well as the attacker’s desired program state that the gadget chain should construct. In combination with a logical encoding of the data flow between gadgets, we query an SMT solver whether a valid gadget chain exists. If successful, the solver provides a proof of existence in the form of a synthesized gadget chain. This way, we remain fully flexible w.r.t. to the gadgets. In empirical tests, we find that the solver often uses all types of control-flow transfer instructions and even gadgets with side effects. Our evaluation shows that SGC successfully finds working gadget chains for real-world exploitation scenarios within minutes, even when all state-of-the-art approaches fail.
+
+### AngErza: Automated Exploit Generation
+
+* <img src="image/pdf_24px.png">[paper](./paper/2021AngErza%20Automated%20Exploit%20Generation.pdf)
+
+**Abstract:** Vulnerability detection and exploitation serves as a milestone for secure development and identifying major threats in software applications. Automated exploit generation helps in easier identification of bugs, the attack vectors and the various possibilities of generation of the exploit payload. Thus, we introduce AngErza which uses dynamic and symbolic execution to identify hot-spots in the code, formulate constraints and generate a payload based on those constraints. Our tool is entirely based on angr
+which is an open-sourced offensive binary analysis framework. The work around AngErza focuses on exploit and vulnerability detection in CTF-style C binaries compiled on 64-bit Intel architecture for the early-phase of this project.
+
+### End-to-End Automated Exploit Generation for Processor Security Validation
+
+* <img src="image/pdf_24px.png">[Paper](./paper/2021End-to-End%20Automated%20Exploit%20Generation%20for%20Processor%20Security%20Validation.pdf)
+
+**Abstract:** In this article, we present Coppelia, an end-to-end exploit generation tool for use during the security validation of hardware designs. We evaluate Coppelia on three reduced instruction set computer (RISC) processors of different architectures. Coppelia is able to find and generate exploits for 29 of 31 known vulnerabilities in these processors and finds four new vulnerabilities along with exploits in these processors.
+
+### Shellcode_IA32: A Dataset for Automatic Shellcode Generation
+
+* <img src="image/pdf_24px.png">[Paper](./paper/2021Shellcode_IA32%20A%20Dataset%20for%20Automatic%20Shellcode%20Generation.pdf)
+
+**Abstract:** We take the first step to address the task of automatically generating shellcodes, i.e., small pieces of code used as a payload in the exploitation of a software vulnerability, starting from natural language comments. We assemble and release a novel dataset (Shellcode IA32), consisting of challenging but common assembly instructions with their natural language descriptions. We experiment with standard methods in neural machine translation (NMT) to establish baseline performance levels on this task.
 
 ### A Generic Technique for Automatically Finding Defense-Aware Code Reuse Attacks
 
@@ -297,12 +399,37 @@ In this paper, we propose a generic framework for automatically discovering defe
 **Abstract:** Recent research has proposed various methods to perform kernel exploitation and bypass kernel protection. For example, security researchers have demonstrated an exploitation method that utilizes the characteristic of elastic kernel objects to bypass KASLR, disclose stack/heap cookies, and even perform arbitrary read in the kernel. While this exploitation method is considered a commonly adopted approach to disclosing critical kernel information, there is no evidence indicating a strong need for developing a new defense mechanism to limit this exploitation method. It is because the effectiveness of this exploitation method is demonstrated only on anecdotal kernel vulnerabilities. It is unclear whether such a method is useful for a majority of kernel vulnerabilities.    
 To answer this question, we propose a systematic approach. It utilizes static/dynamic analysis methods to pinpoint elastic kernel objects and then employs constraint solving to pair them to corresponding kernel vulnerabilities. In this work, we implement our proposed method as a tool - ELOISE. Using this tool on three popular OSes (Linux, FreeBSD, and XNU), we discover that elastic objects are pervasive in general caches. Evaluating the effectiveness of these elastic objects on 40 kernel vulnerabilities across three OSes, we observe that they can enable most of the vulnerabilities to bypass KASLR and heap cookie protector. Besides, we also observe that these elastic objects can even escalate the exploitability of some vulnerabilities allowing them to perform arbitrary read in the kernel. Motivated by these observations, we further introduce a new defense mechanism to mitigate the threat of elastic kernel objects. We prototype our defense mechanism on Linux, showing this mechanism introduces negligible overhead.
 
+### Relating the Empirical Foundations of Attack Generation and Vulnerability Discovery
+
+* <img src="image/pdf_24px.png">[Paper](./paper/2020Relating%20the%20Empirical%20Foundations%20of%20Attack%20Generation%20and%20Vulnerability%20Discovery.pdf)
+
+**Abstract:** Automatically generating exploits for attacks receives much attention in security testing and auditing. However, little is known about the continuous effect of automatic attack generation and detection. In this paper, we develop an analytic model to understand the cost-benefit tradeoffs in light of the process of vulnerability discovery. We develop a three-phased model, suggesting that the cumulative malware detection has a productive period before the rate of gain flattens. As the detection mechanisms co-evolve, the gain will likely increase. We evaluate our analytic model by using an anti-virus tool to detect the thousands of Trojans automatically created. The anti-virus scanning results over five months show the validity of the model and point out future research directions.
+
 ### AURORA: Statistical Crash Analysis for Automated Root Cause Explanation
 
 * <img src="image/pdf_24px.png">[Paper](./paper/2020AURORA%20Statistical%20Crash%20Analysis%20for%20Automated%20Root%20Cause%20Explanation.pdf)
 
 **Abstract:** Given the huge success of automated software testing techniques, a large amount of crashes is found in practice. Identifying the root cause of a crash is a time-intensive endeavor, causing a disproportion between finding a crash and fixing the underlying software fault. To address this problem, various approaches have been proposed that rely on techniques such as reverse execution and backward taint analysis. Still, these techniques are either limited to certain fault types or provide an analyst with assembly instructions, but no context information or explanation of the underlying fault.   
 In this paper, we propose an automated analysis approach that does not only identify the root cause of a given crashing input for a binary executable, but also provides the analyst with context information on the erroneous behavior that characterizes crashing inputs. Starting with a single crashing input, we generate a diverse set of similar inputs that either also crash the program or induce benign behavior. We then trace the program’s states while executing each found input and generate predicates, i. e., simple Boolean expressions that capture behavioral differences between crashing and noncrashing inputs. A statistical analysis of all predicates allows us to identify the predicate pinpointing the root cause, thereby not only revealing the location of the root cause, but also providing an analyst with an explanation of the misbehavior a crash exhibits at this location. We implement our approach in a tool called AURORA and evaluate it on 25 diverse software faults. Our evaluation shows that AURORA is able to uncover root causes even for complex bugs. For example, it succeeded in cases where many millions of instructions were executed between developer fix and crashing location. In contrast to existing approaches, AURORA is also able to handle bugs with no data dependency between root cause and crash, such as type confusion bugs.
+
+### Automatic Generation of Compact Printable Shellcodes for x86
+
+* <img src="image/pdf_24px.png">[paper](./paper/2020Automatic%20Generation%20of%20Compact%20Printable%20Shellcodes%20for%20x86.pdf)
+
+**Abstract:** Shellcode is a sequence of executable instruction(s) that can be used to exploit vulnerable processes by injecting it into a processes address space. A typical shellcode comprises of printable (ex. ‘a’, ‘{’, ‘/’, etc) and non-printable bytes (ex. DEL, INS, etc). A way to inject these shellcodes into a processes address space is by leveraging a buffer overflow exploit. However defensive filters will drop non-printable bytes from program inputs, thereby rendering the shellcode exploit useless. In order to bypass these defensive filters, shellcodes with only printable characters can be used. However it is a non-trivial task to write printable shellcodes. For this reason researchers have come up with tools to convert arbitrary shellcodes into functionally equivalent printable shellcodes. One of the popular tools is based on the Riley Eller algorithm. One drawback of this algorithm is that the resultant shellcode is much larger than the original shellcode. In this paper we present a new encoding scheme which produces a much more compact (about ~40% smaller) printable shellcode as compared to the Riley Eller algorithm.
+
+### Tainting-Assisted and Context-Migrated Symbolic Execution of Android Framework for Vulnerability Discovery and Exploit Generation
+
+* <img src="image/pdf_24px.png">[Paper](./paper/2020Tainting-Assisted%20and%20Context-Migrated%20Symbolic%20Execution%20of%20Android%20Framework%20for%20Vulnerability%20Discovery%20and%20Exploit%20Generation.pdf)
+
+**Abstract:** Android Application Framework is an integral and foundational part of the Android system. Each of the two billion (as of 2017) Android devices relies on the system services of Android Framework to manage applications and system resources. Given its critical role, a vulnerability in the framework can be exploited to launch large-scale cyber attacks and cause severe harms to user security and privacy. Recently, many vulnerabilities in Android Framework were exposed, showing that it is indeed vulnerable and exploitable. While there is a large body of studies on Android application analysis, research on Android Framework analysis is very limited. In particular, to our knowledge, there is no prior work that investigates how to enable symbolic execution of the framework, an approach that has proven to be very powerful for vulnerability discovery and exploit generation. We design and build the first system, CENTAUR, that enables symbolic execution of Android Framework. Due to the middleware nature and technical peculiarities of the framework that impinge on the analysis, many unique challenges arise and are addressed in CENTAUR. The system has been applied to discovering new vulnerability instances, which can be exploited by recently uncovered attacks against the framework, and to generating PoC exploits.
+
+### EthPloit: From Fuzzing to Efficient Exploit Generation against Smart Contracts
+
+* <img src="image/pdf_24px.png">[Paper](./paper/2020EthPloit%20From%20Fuzzing%20to%20Efficient%20Exploit%20Generation%20against%20Smart%20Contracts.pdf)
+
+**Abstract:** Smart contracts, programs running on blockchain systems, leverage diverse decentralized applications (DApps). Unfortunately, well-known smart contract platforms, Ethereum for example, face serious security problems. Exploits to contracts may cause enormous financial losses, which emphasize the importance of smart contract testing. However, current exploit generation tools have difficulty to solve hard constraints in execution paths and cannot simulate the blockchain behaviors very well. These problems cause a loss of coverage and accuracy of exploit generation.    
+To overcome the problems, we design and implement ETHPLOIT, a smart contract exploit generator based on fuzzing. ETHPLOIT adopts static taint analysis to generate exploittargeted transaction sequences, a dynamic seed strategy to pass hard constraints and an instrumented Ethereum Virtual Machine to simulate blockchain behaviors. We evaluate ETHPLOIT on 45,308 smart contracts and discovered 554 exploitable contracts. ETHPLOIT automatically generated 644 exploits without any false positive and 306 of them cannot be generated by previous exploit generation tools.
 
 ### Automatic Techniques to Systematically Discover New Heap Exploitation Primitives
 
@@ -317,6 +444,18 @@ We evaluated ARCHEAP with three real-world allocators (i.e., ptmalloc, tcmalloc,
 * <img src="image/pdf_24px.png">[Paper](./paper/2020Autosploit%20A%20Fully%20Automated%20Framework%20for%20Evaluating.pdf)
 
 **Abstract:** The existence of a security vulnerability in a system does not necessarily mean that it can be exploited. In this research, we introduce Autosploit —an automated framework for evaluating the exploitability of vulnerabilities. Given a vulnerable environment and relevant exploits, Autosploit will automatically test the exploits on different configurations of the environment in order to identify the specific properties necessary for successful exploitation of the existing vulnerabilities. Since testing all possible system configurations is infeasible, we introduce an efficient approach for testing and searching through all possible configurations of the environment. The efficient testing process implemented by Autosploit is based on two algorithms: generalized binary splitting and Barinel, which are used for noiseless and noisy environments respectively. We implemented the proposed framework and evaluated it using real vulnerabilities. The results show that Autosploit is able to automatically identify the system properties that affect the ability to exploit a vulnerability in both noiseless and noisy environments. These important results can be utilized for more accurate and effective risk assessment.
+
+### Attacks on Lightweight Hardware-Based Security Primitives
+
+* <img src="image/pdf_24px.png">[Paper](./paper/2020Attacks%20on%20Lightweight%20Hardware-Based%20Security%20Primitives.pdf)
+
+**Abstract:** In today’s digital age, the ease of data collection, transfer, and storage continues to shape modern society and the ways we interact with our world. The advantages are numerous, but there is also an increased risk of information unintentionally falling into the wrong hands. Finding methods of protecting sensitive information at the hardware level is of utmost importance, and in this paper we aim to provide a survey on recent developments in attacks on lightweight hardware-based security primitives (LHSPs) designed to do just that. Specifically, we provide an analysis of the attack resilience of these proposed LHSPs in an attempt bring awareness to any vulnerabilities that may exist. We do this in the hope that it will encourage the continued development of attack countermeasures as well as completely new methods of data protection in order to prevent the discussed methods of attack from remaining viable in the future. The types of LHSPs discussed include physical unclonable functions (PUFs) and true random number generators (TRNGs), with a primary emphasis placed on PUFs.
+
+### Survey of Methods for Automated Code-Reuse Exploit Generation
+
+* <img src="image/pdf_24px.png">[Paper](./paper/2020Survey%20of%20Methods%20for%20Automated%20Code-Reuse%20Exploit%20Generation.pdf)
+
+**Abstract:** This paper provides a survey of methods and tools for automated code-reuse exploit generation. Such exploits use code that is already contained in a vulnerable program. The code-reuse approach allows one to exploit vulnerabilities in the presence of operating system protection that prohibits data memory execution. This paper contains a description of various code-reuse methods: return-to-libc attack, return-oriented programming, jump-oriented programming, and others. We define fundamental terms: gadget, gadget frame, gadget catalog. Moreover, we show that, in fact, a gadget is an instruction, and a set of gadgets defines a virtual machine. We can reduce an exploit creation problem to code generation for this virtual machine. Each particular executable file defines a virtual machine instruction set. We provide a survey of methods for gadgets searching and determining their semantics (creating a gadget catalog). These methods allow one to get the virtual machine instruction set. If a set of gadgets is Turing-complete, then a compiler can use a gadget catalog as a target architecture. However, some instructions can be absent. Hence we discuss several approaches to replace missing instructions with multiple gadgets. An exploit generation tool can chain gadgets by pattern searching (regular expressions) or considering gadgets semantics. Furthermore, some chaining methods use genetic algorithms, while others use SMT-solvers. We compare existing open-source tools and propose a testing system rop-benchmark that can be used to verify whether a generated chain successfully opens a shell.
 
 ### Guide Me to Exploit: Assisted ROP Exploit Generation for ActionScript Virtual Machine
 
